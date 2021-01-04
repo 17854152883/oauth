@@ -1,0 +1,15 @@
+server:
+  port: 5001
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.8.132:3306/cloud?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: like1996
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.8.132:8848
+  application:
+    name: oauth
