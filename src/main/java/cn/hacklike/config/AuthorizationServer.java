@@ -80,7 +80,7 @@ public class AuthorizationServer extends AuthorizationServerConfigurerAdapter {
         clients.inMemory() //使用内存
                 .withClient("cl") // 客户端的id
                 .secret(new BCryptPasswordEncoder().encode("secret")) // 密钥
-                .resourceIds("resl","user") // 可以访问的资源列表
+                .resourceIds("resl","user","likeProject") // 可以访问的资源列表
                 // 该client允许的授权类型authorization_code,password,refresh_token,implicit,client_credentials
                 .authorizedGrantTypes("authorization_code", "password","client_credentials","implicit","refresh_token")
                 .scopes("all")// 允许的授权范围
